@@ -1,9 +1,9 @@
 import { Pool } from 'pg'
 export const pool=new Pool({
-    host:'ec2-34-234-12-149.compute-1.amazonaws.com',
-    user:'rdeqfvaeuvnkai',
-    password:'b913d0c91608435fbc5113b04ecc3ad195fbe77b7eba8d10ac05c235beb63de7',
-    database:'d96t1qr6q5dgfl',
+    host:'ec2-52-203-74-38.compute-1.amazonaws.com',
+    user:'kkmhxnhaakpjhi',
+    password:'f3968063b2bae8a7c8a51ffeeeb461cf1ba5c2cbcccc92a5198a520fe1d1e50e',
+    database:'df133tvs9kslrg',
     port:5432,
     ssl:{rejectUnauthorized:false}
 });
