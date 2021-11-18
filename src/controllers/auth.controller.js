@@ -9,7 +9,7 @@ export const login = async (req, res)=>{
     try {
        const {username, password} = req.body;
        //console.log(pass);
-       const response = await pool.query('SELECT * FROM users where username = $1', [username]);      
+       const response = await pool.query('SELECT * FROM usuario where username = $1', [username]);      
        if(response.rows.length!=0){           
            const passold = response.rows[0].password;
            if(await bcrypt.compare(password, passold)){
