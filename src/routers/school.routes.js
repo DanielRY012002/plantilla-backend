@@ -1,9 +1,9 @@
 import { Router } from 'express'
 const router=Router();
-import * as schoolCtr from '../controllers/school.controller'
-const {checkToken}=require('../auth/token_validation')
-router.get('/',schoolCtr.readAllSchools);
-router.get('/:id',schoolCtr.readSchool);
-router.post('/',schoolCtr.createSchool);
-router.delete('/:id',schoolCtr.dellSchool);
+import * as schoolCtr from '../controllers/school.controller';
+const {checkToken}=require('../auth/token_validation');
+router.get('/',checkToken,schoolCtr.readAllSchools);
+router.get('/:id',checkToken,schoolCtr.readSchool);
+router.post('/',checkToken,schoolCtr.createSchool);
+router.delete('/:id',checkToken,schoolCtr.dellSchool);
 export default router;
